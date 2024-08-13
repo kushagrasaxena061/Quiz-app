@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 const Room = () => {
   const params = useParams();
   const { roomId } = params;
+  const { naam } = params;
 
   const myMeeting = async (element: any) => {
     const appId = 139327012;
@@ -17,7 +18,7 @@ const Room = () => {
       serverSecret,
       roomId + "",
       Date.now().toString(),
-      roomId + ""
+      naam + ""
     );
     const zp = ZegoUIKitPrebuilt.create(kitToken);
     zp.joinRoom({

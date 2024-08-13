@@ -52,7 +52,7 @@ const Hero = () => {
         </form>
         <div className="mt-6">
           <Link
-            href={`/room/${roomCode}`}
+            href={`/room/${naam}/${roomCode}`}
             className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-3  font-medium text-gray-50 text-2xl shadow transition-colors duration-500 hover:bg-primary/80"
           >
             Start Video Call
