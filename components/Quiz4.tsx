@@ -144,7 +144,11 @@ const Quiz = ({ questions, userId }: QuizProps) => {
             </div>
 
             <div>
-              <h3 className="mb-5 text-2xl font-bold">{question}</h3>
+              <div className="mb-5 text-2xl font-bold">
+                <video>
+                  <source src="movie.mp4" type="video/mp4" />
+                </video>
+              </div>
               <ul>
                 {answers.map((answer: string, idx: number) => (
                   <li

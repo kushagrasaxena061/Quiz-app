@@ -144,7 +144,9 @@ const Quiz = ({ questions, userId }: QuizProps) => {
             </div>
 
             <div>
-              <h3 className="mb-5 text-2xl font-bold">{question}</h3>
+              <div className="mb-5 text-2xl font-bold">
+                <img src={question} alt="Flowers in Chania" width="460" height="345" />
+              </div>
               <ul>
                 {answers.map((answer: string, idx: number) => (
                   <li
