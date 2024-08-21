@@ -23,9 +23,10 @@ export async function POST(req: NextRequest) {
       const updatedUserStats = await prisma.quizResult.update({
         where: { id: existingUser.quizResults[0].id },
         data: {
-          quizScore: quizScore,
-          correctAnswers: correctAnswers,
-          wrongAnswers: wrongAnswers,
+          quizScore: existingUser.quizResults[0].quizScore + quizScore,
+          correctAnswers:
+            existingUser.quizResults[0].correctAnswers + correctAnswers,
+          wrongAnswers: existingUser.quizResults[0].wrongAnswers + wrongAnswers,
         },
       });
       return NextResponse.json({ updatedUserStats });

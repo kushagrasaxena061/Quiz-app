@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import LayoutProvider from "@/providers/LayoutProvider";
+import GoogleTranslate from "@/components/GoogleTranslate";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -23,7 +24,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${raleway.className} min-h-screen`}>
-          <LayoutProvider>{children}</LayoutProvider>
+          <LayoutProvider>
+            <GoogleTranslate />
+
+            {children}</LayoutProvider>
         </body>
       </html>
     </ClerkProvider>

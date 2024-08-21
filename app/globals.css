@@ -11,3 +11,33 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* styles/globals.css */
+.translate-button {
+  @apply inline-flex items-center justify-center;
+  margin-left: 20px; /* Left margin */
+  margin-right: 40px; /* Right margin */
+}
+
+#google_translate_element .goog-te-gadget-simple {
+  @apply bg-blue-600 text-white rounded-full cursor-pointer text-xs flex items-center justify-center 
+         transition-transform transform hover:scale-110;
+  width: 20px; /* Set the button width to 10px */
+  height: 16px; /* Set the button height to 10px */
+  font-size: 12px; /* Adjust font size to fit the button */
+  line-height: 10px; /* Ensure the button height matches */
+}
+
+#google_translate_element .goog-te-gadget-simple .goog-te-menu-value {
+  @apply text-white;
+  display: none; /* Hide text for small buttons */
+}
+
+#google_translate_element .goog-te-gadget-simple::before {
+  content: "🌐"; /* Use an icon or emoji instead of text */
+  font-size: 12px; /* Adjust size of the icon */
+}
+
+#google_translate_element .goog-te-combo {
+  @apply hidden;
+}
